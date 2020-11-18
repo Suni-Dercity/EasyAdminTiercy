@@ -1,0 +1,266 @@
+main {
+    padding-top: 8vh;
+    padding-bottom: 10vh;
+    min-height: calc(100% - 18vh);
+    background-image: url(../images/fondProfil.png);
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+.titre3 {
+    display: flex;
+    flex-direction: row;
+    margin-left: 5vw;
+}
+
+.infos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px;
+    border-bottom: solid 2px #2b2b2b;
+    width: 63vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.infos p {
+    margin: 0;
+}
+
+.infosVehicule p:last-child {
+    margin-bottom: 1vh;
+}
+
+.trajets {
+    display: grid;
+    grid-template-columns: 15vw 10vw 15vw 15vw;
+    justify-content: space-around;
+    width: 64vw;
+    margin-bottom: 3vh;
+    color: #1b1b1b;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: solid 2px #1b1b1b;
+}
+
+.boutonPlusTrajets {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vh;
+}
+
+.boutonsBasProfil {
+    display: flex;
+    flex-direction: row;
+    color: #1b1b1b;
+    margin-top: 3vh;
+    width: 30vw;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.boutonsTextesProfil {
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1vh;
+    color: #2b2b2b;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-width: 1px;
+    border-color: #2b2b2b;
+    border-style: solid;
+}
+
+.boutonsTextesProfil:hover {
+    background-color: #2b2b2b;
+    color: white;
+    transition-duration: 0.3s;
+}
+
+.boutonAfficherPlus {
+    width: 4vw;
+    height: auto;
+
+}
+
+.boutonPlus {
+    width: 4vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.boxProfil {
+    width: 80vw;
+    background-color: rgba(255, 255, 255, 0.85);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2vh;
+    margin-top: 1vh;
+    padding-bottom: 4vh;
+}
+
+.boxInfosVehicule {
+    display: flex;
+    flex-direction: column;
+    padding-left: 5vw;
+}
+
+.infosVehicule p {
+    margin: 0;
+    padding: 10px;
+    border-bottom: solid 2px #2b2b2b;
+    width: 63vw;
+    margin-left: 2.5vw;
+    padding-top: 15px;
+}
+
+.goutsMusicaux {
+    display: flex;
+    flex-direction: column;
+}
+
+.goutsMusicaux h2 {
+    margin-left: 5vw;
+}
+
+.goutsMusicaux p {
+    margin: 0;
+    margin-left: 3vw;
+}
+
+h1 {
+    margin-top: 2vh;
+}
+
+h3 {
+    margin-left: 6vw;
+}
+
+.boxGenres {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.boxGenres p {
+    padding: 10px;
+    border-bottom: solid 2px #1b1b1b;
+    font-size: 18px;
+    margin-bottom: 1vh;
+}
+
+.boxVehicules p:last-child {
+    margin-bottom: 3vh;
+}
+
+.avisBox {
+    display: grid;
+    grid-template-columns: 45vw 8vw 10vw;
+    margin-left: auto;
+    margin-right: auto;
+    width: 64vw;
+    padding: 10px;
+    border-bottom: solid 2px #1b1b1b;
+}
+
+.titreAvis {
+    margin-bottom: 0;
+}
+
+.avisBox p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.avisBox p:first-child {
+    padding-right: 10px;
+}
+
+.avisBox p:nth-child(2) {
+    padding-right: 10px;
+}
+
+.boxAvantages {
+    display: flex;
+    flex-direction: column;
+}
+
+.boxAvantages h2 {
+    margin-left: 5vw;
+}
+
+.avantagesBox {
+    display: grid;
+    grid-template-columns: 10vw 16vw 18vw 20vw;
+    width: 64vw;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: solid 2px #1b1b1b;
+}
+
+.avantagesBox p {
+    padding: 15px;
+    margin: 0;
+}
+
+.avantagesBox {
+    margin-bottom: 1vh;
+}
+
+.liensFestival {
+    color: #1b1b1b;
+    text-decoration: underline;
+}
+
+@media screen and (max-width:1200px) {
+    .avisBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .avisBox p {
+        text-align: center;
+    }
+
+    .avantagesBox {
+        display: flex;
+        flex-direction: column;
+        width: 64vw;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: solid 2px #1b1b1b;
+    }
+
+    .avantagesBox p {
+        padding: 5px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .boutonsBasProfil {
+        width: 50vw;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .boutonsBasProfil {
+        width: 70vw;
+    }
+}

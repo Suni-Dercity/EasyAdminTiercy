@@ -1,0 +1,63 @@
+#!/bin/bash
+print_usage(){
+  echo "Usage: $0 <dev | prod> [--lemans-proxy] [--help] [ARGS...]"
+}
+
+print_help_and_exit(){
+  echo "dcTool - Outil d'aide à la commande pour la gestion de vos piles Docker."
+  echo
+  print_usage
+  echo "Environnement : "
+  echo "  dev :                  utilise la pile de services pour l'environnement de développement."
+  echo "  prod :                 utilise la pile de services pour l'environnement de recette ou de production."
+  echo
+  echo "Paramètres optionnels :"
+  echo "  -lmp, --lemans-proxy  : configure la pile pour être exploitée derrière le proxy de Le Mans Université"
+  echo "  - -h, --help : affiche cette aide."
+  echo " ARGS :                  exemple des arguments pour docker-compose (ex.: up)"
+  echo " ARGS :                  ne pas oublier de préciser le nom du projet (option -p)"
+  exit 0
+}
+
+if [ $# -eq 0 ]; then
+  echo "Mauvais paramètres" >&2
+  print_usage
+  exit 1
+fi
+
+case $1 in
+  dev|prod) typeEnv=$1;;
+  -h|--help) print_help_and_exit;;
+  *)
+    echo "Paramètre incorrect \"$1\"" >&2;
+    print_usage
+    exit 1;;
+esac
+shift
+
+if [ "$1" == "-lmp" -o "$1" == "--lemans-proxy" ]; then
+  useProxyEnv=1
+  shift
+fi
+
+if [ "$1" == "-h" -o "$1" == "--help" ]; then
+  print_help_and_exit
+fi
+
+if [ ${typeEnv} == "dev" ]; then
+  if [ ! -z "${useProxyEnv}" ] ; then
+    dcFile="docker/docker-compose-dev-lemansproxy.yml"
+  else
+    dcFile="docker/docker-compose-dev.yml"
+  fi
+else
+  if [ ! -z "${useProxyEnv}" ] ; then
+    dcFile="docker/docker-compose-prod-lemansproxy.yml"
+  else
+    dcFile="docker/docker-compose-prod.yml"
+  fi
+fi
+
+set -x
+docker-compose -f ${dcFile} $@
+exit $?

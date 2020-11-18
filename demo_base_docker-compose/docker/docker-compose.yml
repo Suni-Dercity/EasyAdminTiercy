@@ -1,0 +1,41 @@
+version: '3'
+services:
+  http:
+    build: dockerfile/apache/
+    ports:
+      - 8080:80
+    volumes:
+      - ../site:/var/www/html/
+    environment:
+      PHP_HOST: php-fpm:9000
+    links:
+      - php-fpm
+
+  php-fpm:
+    build: dockerfile/php-fpm/
+    volumes:
+      - ../site:/var/www/html/
+    links:
+      - mariadb
+
+  mariadb:
+    image: mariadb
+    env_file:
+      - ./environment/mysql.env
+    environment:
+      - MYSQL_ROOT_PASSWORD=lSj58osiU12kjdj43shaSDDz
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ../databasesInit/mysql/:/docker-entrypoint-initdb.d:ro
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:5.0.2
+    ports:
+      - 8888:80
+    env_file:
+      - environment/phpmyadmin.env
+    links :
+      - mariadb
+
+volumes:
+  mysql-data:

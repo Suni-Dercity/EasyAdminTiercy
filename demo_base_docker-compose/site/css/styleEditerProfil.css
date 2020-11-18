@@ -1,0 +1,188 @@
+main {
+    padding-top: 8vh;
+    padding-bottom: 10vh;
+    min-height: calc(100% - 18vh);
+    background-image: url(../images/fondProfil.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.boxEditer {
+    width: 70vw;
+    background-color: rgba(255, 255, 255, 0.85);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 5vh;
+    margin-top: 2vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.boxMotDePasse {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2vh;
+}
+
+.elementsMotDePasse {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+
+
+
+.boxTelephone {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3vh;
+}
+
+.boxDescription {
+    display: flex;
+    flex-direction: row;
+}
+
+.boxDescription input {
+    width: 350px;
+}
+
+h1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vh;
+    font-size: 16px;
+    color: white;
+    background-color: #1b1b1b;
+    padding: 10px 5px;
+    outline: none;
+    border-style: solid;
+    border-color: transparent;
+    width: 20vw;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.editionProfil label {
+    font-size: 18px;
+    margin-right: 1vw;
+}
+
+fieldset input {
+    padding: 5px;
+    padding-bottom: 2px;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px #1b1b1b;
+    font-size: 15px;
+}
+
+.boxDonneesPersonnelles input {
+    padding: 5px;
+    padding-bottom: 2px;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 1px #1b1b1b;
+    font-size: 15px;
+}
+
+
+.boxMail {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3vh;
+}
+
+.boxMail input {
+    width: 250px;
+}
+
+.boxVehicules {
+    margin-bottom: 2vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h2:nth-child(2) {
+    margin-top: 2vh;
+}
+
+legend {
+    font-size: 18px;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    font-weight: bold;
+}
+
+.supprimerUnVehicule {
+    margin-top: 4vh;
+    padding: 15px;
+    margin-bottom: 4vh;
+}
+
+.boxVehicules div {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1vh;
+}
+
+.boxSupprimerVehicule {
+    margin-bottom: 2vh;
+}
+
+.genreMusique {
+    margin-top: 2vh;
+}
+
+.genreMusique:last-child {
+    margin-bottom: 2vh;
+}
+
+.edition {
+    border: solid 1px #1b1b1b;
+    background-color: #1b1b1b;
+    cursor: pointer;
+    margin-top: 2vh;
+    padding: 12px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3vh;
+}
+
+
+.erreur {
+    background-color: #ff2c2c;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-weight: bold;
+    width: 40vw;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    font-size: 15px;
+}
+
+.edition:hover {
+    background-color: transparent;
+    color: #1b1b1b;
+    transition-duration: 0.3s;
+}

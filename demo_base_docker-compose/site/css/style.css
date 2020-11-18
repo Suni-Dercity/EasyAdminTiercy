@@ -1,0 +1,285 @@
+@font-face {
+    font-family: "CenturyGothic";
+    src: url(../fonts/CenturyGothic.ttf) format("truetype");
+}
+
+html {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    color: #1b1b1b;
+}
+
+html {
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-delay: 0s;
+    animation-name: apparaitre;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes apparaitre {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #1b1b1b;
+}
+
+.accueil {
+    background-color: white;
+    margin: 0;
+    height: 6vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-bottom: 1vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header {
+    box-shadow: 0px 3px 15px -4px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+
+.accueil > a {
+    margin-right: auto;
+    margin-left: 43vw;
+    padding: 0;
+    margin-top: 0.9vh;
+}
+
+.profil {
+    display: flex;
+    position: fixed;
+    right: 0;
+    top: 0;
+    vertical-align: middle;
+}
+
+.imgHeader {
+    position: fixed;
+    right: 1vw;
+    top: 1.5vh;
+    height: 4vh;
+    width: 4vh;
+    cursor: pointer;
+}
+
+.imgHeader2 {
+    position: fixed;
+    right: 4vw;
+    top: 1.5vh;
+    height: 4vh;
+    width: 4vh;
+    cursor: pointer;
+}
+
+.logoHeader {
+    height: 80%;
+    position: absolute;
+    transform: scale(0.8);
+    left: calc(50vw - 70px);
+    top: 3px;
+}
+
+
+footer {
+    width: 100%;
+    border-top: solid rgba(27, 27, 27, 0.80);
+    background-color: white;
+    justify-content: space-between;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 15px;
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 2vh;
+}
+
+.footerSansCopyright {
+    display: flex;
+    flex-direction: column;
+}
+
+.liensFooter {
+    display: flex;
+    flex-direction: row;
+    width: 50vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    justify-content: space-around;
+}
+
+.liensFooter a {
+    text-decoration: none;
+    color: #1b1b1b;
+    font-weight: bold;
+}
+
+#navFooter {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+}
+
+#navFooter li {
+    display: flex;
+    flex-direction: row;
+}
+
+#navFooter a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 5vh;
+}
+
+.logoFooter {
+    height: 4vh;
+    position: fixed;
+    left: 1vw;
+    bottom: 1.5vh;
+    cursor: pointer;
+}
+
+#copyright {
+    text-align: center;
+    width: 100%;
+    background-color: white;
+}
+
+#copyright a {
+    text-decoration: none;
+    color: grey;
+    font-size: 14px;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    margin-bottom: 1px;
+}
+
+.creerUnCompte {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+nav {
+    height: 100vh;
+    width: 22vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.menuCache {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 22vw;
+    background-color: white;
+    position: fixed;
+    left: -100vw;
+}
+
+
+.menuCache a {
+    font-size: 18px;
+    padding-bottom: 5px;
+    border-bottom: solid 2px rgba(27, 27, 27, 0.25);
+    margin-bottom: 2vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    color: #1b1b1b;
+    text-decoration: none;
+}
+
+.menuCache a:hover {
+    border-bottom: solid 2px #1b1b1b;
+    transition-duration: 0.2s;
+}
+
+.burger {
+    position: fixed;
+    left: 1vw;
+    top: 1.5vh;
+    height: 4vh;
+    width: 4vh;
+    cursor: pointer;
+}
+
+.fermerMenu {
+    height: 4vh;
+    width: 4vh;
+    cursor: pointer;
+    padding-left: 1.5vw;
+    margin-top: 2vh;
+    margin-bottom: 3vh;
+}
+
+@media screen and (max-width:1500px) {
+    .liensFooter {
+        width: 80vw;
+    }
+
+    .imgHeader2 {
+        right: 6vw;
+    }
+
+    .menuCache {
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .logoHeader {
+        transform: scale(0.6);
+        left: calc(50vw - 50px);
+        top: 5px;
+    }
+
+    .liensFooter a {
+        font-size: 12px;
+    }
+
+    .imgHeader2 {
+        right: 8vw;
+    }
+
+    .menuCache {
+        width: 40vw;
+    }
+
+    .menuCache a {
+        margin-left: 2vw;
+        margin-right: 3vw;
+    }
+
+}
+
+
+@media screen and (max-width:640px) {
+    .menuCache {
+        width: 100vw;
+    }
+
+    .menuCache a {
+        text-align: center;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+}

@@ -1,0 +1,10 @@
+<?php
+	if(!defined("MYHOST"))
+		define("MYHOST","mariadb");
+	if(!defined("MYUSER"))
+		define("MYUSER","root");
+	if(!defined("MYPASS"))
+		define("MYPASS","lSj58osiU12kjdj43shaSDDz");
+	if(!defined("MYDB"))
+		define("MYDB","testdb");
+?>
