@@ -1,4 +1,0 @@
-<files param.inc.php>
-Order allow,deny
-Deny from all
-</files>
