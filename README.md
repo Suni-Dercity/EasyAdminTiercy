@@ -1,4 +1,4 @@
-# EasyAdminTiercy
+# EasyAdmin
 
 Accès page /login 
 
